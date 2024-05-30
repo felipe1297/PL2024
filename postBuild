@@ -1,5 +1,5 @@
-apt-get update
-apt-get install -y openjdk-8-jdk-headless
+sudo apt-get update
+sudo apt-get install -y openjdk-8-jdk-headless
 
 curl -Lo coursier https://git.io/coursier-cli && chmod +x coursier
 
