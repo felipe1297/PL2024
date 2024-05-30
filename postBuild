@@ -1,3 +1,6 @@
+apt-get update
+apt-get install -y openjdk-8-jdk-headless
+
 curl -Lo coursier https://git.io/coursier-cli && chmod +x coursier
 
 ./coursier launch --fork almond --scala 2.13.3 -- --install
