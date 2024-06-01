@@ -1,3 +1,5 @@
+#! /bin/bash
+
 # Instalar Java sin sudo
 apt-get update
 apt-get install -y openjdk-8-jdk-headless
@@ -7,3 +9,12 @@ curl -Lo coursier https://git.io/coursier-cli && chmod +x coursier
 
 # Instalar el kernel de Almond
 ./coursier launch --fork almond --scala 2.13.3 -- --install
+
+# Clonar o actualizar el repositorio al iniciar el entorno
+if [ -d "PL2024" ]; then
+  cd PL2024
+  git pull origin main
+else
+  git clone https://github.com/felipe1297/PL2024.git
+  cd PL2024
+fi
